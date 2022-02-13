@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java的异常 | luolei的笔记本</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/favicon.svg">
+    <meta name="description" content="连luolei都开始记笔记了，求你多学一点">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.61b409e0.js" as="script"><link rel="preload" href="/assets/js/2.1404a170.js" as="script"><link rel="preload" href="/assets/js/9.cc298396.js" as="script"><link rel="prefetch" href="/assets/js/10.d41bf6dd.js"><link rel="prefetch" href="/assets/js/11.421317f1.js"><link rel="prefetch" href="/assets/js/12.37acd801.js"><link rel="prefetch" href="/assets/js/13.6177ecdd.js"><link rel="prefetch" href="/assets/js/14.e71630b0.js"><link rel="prefetch" href="/assets/js/15.2bb56f36.js"><link rel="prefetch" href="/assets/js/16.94eabcfe.js"><link rel="prefetch" href="/assets/js/17.d6977293.js"><link rel="prefetch" href="/assets/js/18.896c7642.js"><link rel="prefetch" href="/assets/js/19.8f75d976.js"><link rel="prefetch" href="/assets/js/20.28619510.js"><link rel="prefetch" href="/assets/js/21.38028bc7.js"><link rel="prefetch" href="/assets/js/22.002f4a53.js"><link rel="prefetch" href="/assets/js/23.a680f932.js"><link rel="prefetch" href="/assets/js/24.e2049574.js"><link rel="prefetch" href="/assets/js/25.12f269b1.js"><link rel="prefetch" href="/assets/js/26.6660f834.js"><link rel="prefetch" href="/assets/js/27.3bae0144.js"><link rel="prefetch" href="/assets/js/28.66df9504.js"><link rel="prefetch" href="/assets/js/29.d39b27f0.js"><link rel="prefetch" href="/assets/js/3.96cbf3a8.js"><link rel="prefetch" href="/assets/js/30.14ee7d88.js"><link rel="prefetch" href="/assets/js/31.e00cb6a2.js"><link rel="prefetch" href="/assets/js/32.2a039cb8.js"><link rel="prefetch" href="/assets/js/33.d5cc48a2.js"><link rel="prefetch" href="/assets/js/34.8ad3ed4c.js"><link rel="prefetch" href="/assets/js/35.81590eda.js"><link rel="prefetch" href="/assets/js/36.787ae90d.js"><link rel="prefetch" href="/assets/js/37.df4382fe.js"><link rel="prefetch" href="/assets/js/38.e0801940.js"><link rel="prefetch" href="/assets/js/39.b0fa8619.js"><link rel="prefetch" href="/assets/js/4.2d7e81a9.js"><link rel="prefetch" href="/assets/js/40.aaae97b2.js"><link rel="prefetch" href="/assets/js/41.2c999770.js"><link rel="prefetch" href="/assets/js/42.8be4f040.js"><link rel="prefetch" href="/assets/js/43.bc126466.js"><link rel="prefetch" href="/assets/js/44.9521f1bb.js"><link rel="prefetch" href="/assets/js/45.59c950c0.js"><link rel="prefetch" href="/assets/js/46.370abb57.js"><link rel="prefetch" href="/assets/js/47.98676814.js"><link rel="prefetch" href="/assets/js/5.faf53b61.js"><link rel="prefetch" href="/assets/js/6.de37927d.js"><link rel="prefetch" href="/assets/js/7.4976c147.js"><link rel="prefetch" href="/assets/js/8.af71189f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">luolei的笔记本</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/es6/" class="nav-link">
+  ES6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mongodb/crash-course.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mini-program/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/fun/编译LineageOS或者AOSP.html" class="nav-link">
+  东搞西搞
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/luolei200820" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/es6/" class="nav-link">
+  ES6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mongodb/crash-course.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mini-program/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/fun/编译LineageOS或者AOSP.html" class="nav-link">
+  东搞西搞
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/luolei200820" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java的异常"><a href="#java的异常" class="header-anchor">#</a> Java的异常</h1> <p>程序在运行过程中会遇到各种各样的错误，有些是用户行为导致的，有的是意外发生的。所以一个健壮的程序必须处理各种各样的错误。</p> <p>在C语言中使用错误码来表示错误信息，如0表示成功，返回其他整数表示各种错误。</p> <p>Java内置了一套异常处理机制，异常是一种类，因此它本身带有类型信息。</p> <hr> <p><img src="/assets/img/异常继承关系.6d45cdcf.png" alt="异常继承关系"></p> <p>从继承关系可以知道：<code>Throwable</code>有两个体系，<code>Error</code>和<code>Exception</code>。<code>Error</code>表示严重的错误，程序对此无能为力。例如：</p> <ul><li><code>OutOfMemoryError</code>：内存耗尽</li> <li><code>NoClassDefFoundError</code>：无法加载某个Class</li> <li><code>StackOverflowError</code>：栈溢出</li></ul> <p>而<code>Excepiton</code>是运行时的错误，它可以被捕获并处理。</p> <hr> <p>某些异常是程序处理逻辑的一部分，应该被捕获处理：</p> <ul><li><code>NumberFormatException</code>：数值类型的格式错误</li> <li><code>FileNotFoundException</code>：未找到文件</li> <li><code>SocketException</code>：读取网络失败</li></ul> <p>还有一些是程序逻辑编写不正确，应该修复程序本身：</p> <ul><li><code>NullPointerException</code>:对某个null的对象调用方法或字段</li> <li><code>IndexOutOfBoundsException</code>：数组索引越界</li></ul> <hr> <p><code>Exception</code>又分为两大类：</p> <ol><li><code>RuntimeException</code>以及它的子类；</li> <li>非<code>RuntimeException</code>（包括<code>IOException</code>、<code>ReflectiveOperationException</code>等等）</li></ol> <p>Java规定：</p> <ul><li>必须捕获的异常，包括<code>Exception</code>及其子类，但不包括<code>RuntimeException</code>及其子类，这种类型的异常称为<strong>Checked Exception</strong>。</li> <li>不需要捕获的异常，包括<code>Error</code>及其子类，<code>RuntimeException</code>及其子类。</li></ul> <h2 id="捕获异常"><a href="#捕获异常" class="header-anchor">#</a> 捕获异常</h2> <p>捕获异常使用<code>try...catch</code>语句，把可能发生异常的代码放到<code>try {...}</code>中，然后使用<code>catch</code>捕获对应的<code>Exception</code>及其子类：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bs <span class="token operator">=</span> <span class="token function">toGBK</span><span class="token punctuation">(</span><span class="token string">&quot;中文&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>bs<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">static</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">toGBK</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 用指定编码转换String为byte[]:</span>
+            <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">&quot;GBK&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">UnsupportedEncodingException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 如果系统不支持GBK编码，会捕获到UnsupportedEncodingException:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 打印异常信息</span>
+            <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 尝试使用用默认编码</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>像<code>UnsupportedEncodingException</code>这样的Checked Exception，必须被捕获。如果不捕获或由调用函数<code>toGBK</code>抛出，则会编译失败。可见，只要是方法声明的Checked Exception，不在调用层捕获，也必须在更高的调用层捕获。</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">static</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">toGBK</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">UnsupportedEncodingException</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 用指定编码转换String为byte[]:</span>
+    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">&quot;GBK&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <p>最后可以由main()抛出<code>Exception</code>，也就声明了可能抛出所有的<code>Exception</code>，因此也就不需要内部捕获了，代价就是一旦发生异常，程序会立即退出。</p> <p>捕获后应该至少要调用printStackTrace()方法打印异常栈，把异常记录下来。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.61b409e0.js" defer></script><script src="/assets/js/2.1404a170.js" defer></script><script src="/assets/js/9.cc298396.js" defer></script>
+  </body>
+</html>

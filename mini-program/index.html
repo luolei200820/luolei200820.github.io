@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>小程序登录 | luolei的笔记本</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/favicon.svg">
+    <meta name="description" content="连luolei都开始记笔记了，求你多学一点">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.61b409e0.js" as="script"><link rel="preload" href="/assets/js/2.1404a170.js" as="script"><link rel="preload" href="/assets/js/43.bc126466.js" as="script"><link rel="prefetch" href="/assets/js/10.d41bf6dd.js"><link rel="prefetch" href="/assets/js/11.421317f1.js"><link rel="prefetch" href="/assets/js/12.37acd801.js"><link rel="prefetch" href="/assets/js/13.6177ecdd.js"><link rel="prefetch" href="/assets/js/14.e71630b0.js"><link rel="prefetch" href="/assets/js/15.2bb56f36.js"><link rel="prefetch" href="/assets/js/16.94eabcfe.js"><link rel="prefetch" href="/assets/js/17.d6977293.js"><link rel="prefetch" href="/assets/js/18.896c7642.js"><link rel="prefetch" href="/assets/js/19.8f75d976.js"><link rel="prefetch" href="/assets/js/20.28619510.js"><link rel="prefetch" href="/assets/js/21.38028bc7.js"><link rel="prefetch" href="/assets/js/22.002f4a53.js"><link rel="prefetch" href="/assets/js/23.a680f932.js"><link rel="prefetch" href="/assets/js/24.e2049574.js"><link rel="prefetch" href="/assets/js/25.12f269b1.js"><link rel="prefetch" href="/assets/js/26.6660f834.js"><link rel="prefetch" href="/assets/js/27.3bae0144.js"><link rel="prefetch" href="/assets/js/28.66df9504.js"><link rel="prefetch" href="/assets/js/29.d39b27f0.js"><link rel="prefetch" href="/assets/js/3.96cbf3a8.js"><link rel="prefetch" href="/assets/js/30.14ee7d88.js"><link rel="prefetch" href="/assets/js/31.e00cb6a2.js"><link rel="prefetch" href="/assets/js/32.2a039cb8.js"><link rel="prefetch" href="/assets/js/33.d5cc48a2.js"><link rel="prefetch" href="/assets/js/34.8ad3ed4c.js"><link rel="prefetch" href="/assets/js/35.81590eda.js"><link rel="prefetch" href="/assets/js/36.787ae90d.js"><link rel="prefetch" href="/assets/js/37.df4382fe.js"><link rel="prefetch" href="/assets/js/38.e0801940.js"><link rel="prefetch" href="/assets/js/39.b0fa8619.js"><link rel="prefetch" href="/assets/js/4.2d7e81a9.js"><link rel="prefetch" href="/assets/js/40.aaae97b2.js"><link rel="prefetch" href="/assets/js/41.2c999770.js"><link rel="prefetch" href="/assets/js/42.8be4f040.js"><link rel="prefetch" href="/assets/js/44.9521f1bb.js"><link rel="prefetch" href="/assets/js/45.59c950c0.js"><link rel="prefetch" href="/assets/js/46.370abb57.js"><link rel="prefetch" href="/assets/js/47.98676814.js"><link rel="prefetch" href="/assets/js/5.faf53b61.js"><link rel="prefetch" href="/assets/js/6.de37927d.js"><link rel="prefetch" href="/assets/js/7.4976c147.js"><link rel="prefetch" href="/assets/js/8.af71189f.js"><link rel="prefetch" href="/assets/js/9.cc298396.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">luolei的笔记本</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/es6/" class="nav-link">
+  ES6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mongodb/crash-course.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mini-program/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/fun/编译LineageOS或者AOSP.html" class="nav-link">
+  东搞西搞
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/luolei200820" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/es6/" class="nav-link">
+  ES6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mongodb/crash-course.html" class="nav-link">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mini-program/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/fun/编译LineageOS或者AOSP.html" class="nav-link">
+  东搞西搞
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/luolei200820" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mini-program/" aria-current="page" class="active sidebar-link">小程序登录</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mini-program/#登录流程时序" class="sidebar-link">登录流程时序</a></li><li class="sidebar-sub-header"><a href="/mini-program/#自定义登录态" class="sidebar-link">自定义登录态</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mini-program/#使用-jwt-来用户认证" class="sidebar-link">使用 JWT 来用户认证</a></li><li class="sidebar-sub-header"><a href="/mini-program/#jwt-续期机制" class="sidebar-link">JWT 续期机制</a></li></ul></li><li class="sidebar-sub-header"><a href="/mini-program/#代码参考" class="sidebar-link">代码参考</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mini-program/#小程序调用-wx-login" class="sidebar-link">小程序调用 wx.login()</a></li><li class="sidebar-sub-header"><a href="/mini-program/#服务端调用-auth-code2session" class="sidebar-link">服务端调用 auth.code2Session</a></li><li class="sidebar-sub-header"><a href="/mini-program/#小程序将-token-缓存" class="sidebar-link">小程序将 token 缓存</a></li><li class="sidebar-sub-header"><a href="/mini-program/#请求头中带上-token" class="sidebar-link">请求头中带上 token</a></li><li class="sidebar-sub-header"><a href="/mini-program/#token-续期" class="sidebar-link">token 续期</a></li><li class="sidebar-sub-header"><a href="/mini-program/#撤销-token" class="sidebar-link">撤销 token</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="小程序登录"><a href="#小程序登录" class="header-anchor">#</a> 小程序登录</h1> <p>小程序可以通过微信官方提供的登录能力方便地获取微信提供的用户身份标识，快速建立小程序内的用户体系。</p> <h2 id="登录流程时序"><a href="#登录流程时序" class="header-anchor">#</a> 登录流程时序</h2> <p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/api-login.2fcc9f35.jpg" alt="登录流程时序"></p> <details class="custom-block details"><summary>DETAILS</summary> <p>openid：用户在当前小程序中的唯一标识<br>
+unionid：用户在微信开放平台的唯一标识（如需要在拥有的多个公众号、小程序中区分同一个用户身份）<br>
+session_key：用于服务端解密开放数据</p></details> <h2 id="自定义登录态"><a href="#自定义登录态" class="header-anchor">#</a> 自定义登录态</h2> <p>在以往的 web 应用中，验证用户的身份一般流程是这样的</p> <ol><li>用户向服务器发送用户名和密码</li> <li>服务器验证正确之后，在当前会话（session）中保存相关的信息，如用户的角色、登录时间等。</li> <li>服务端将 session_id 写入用户的 Cookie 中</li> <li>以后用户请求都会带上 Cookie，从而服务端知道用户身份</li></ol> <p>这么做的问题在于拓展性不好，因为 Cookie 有跨域问题，这可以用其他发送方式解决。另一种解决方式是将 session_id 持久化，写入到数据库中，每个网站收到请求后都访问持久层，容易造成单点故障。</p> <h3 id="使用-jwt-来用户认证"><a href="#使用-jwt-来用户认证" class="header-anchor">#</a> 使用 JWT 来用户认证</h3> <p>将标识用户唯一的身份信息写入 JWT，发送给用户，用户每次请求接口、资源时都带上，服务端通过签名认证这个数据是自己的，同时也没有被篡改。</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <ol><li>JWT 默认是不加密的，不能将用户敏感的信息存入，但也可以加密后使用</li> <li>为了减少盗用 JWT 的有效时间应该设置得比较短，对于重要的权限要重新认证</li> <li>避免使用 HTTP 明文传输</li></ol></div> <h3 id="jwt-续期机制"><a href="#jwt-续期机制" class="header-anchor">#</a> JWT 续期机制</h3> <p>在登录时签发 accessToken 和 refreshToken，都传给用户。accessToken 过期时间一般设置 10-15 分钟或者更长；refreshToken 不设置过期时间，只能手动使其失效，或者也可以设置较长的时间，当失效后需要重新登录，因此需要把 refreshToken 存入持久层。</p> <p>当请求接口发现 accessToken 过期后，使用 refreshToken 重新获取 accessToken。当 refreshToken 过期时重新登录。</p> <h2 id="代码参考"><a href="#代码参考" class="header-anchor">#</a> 代码参考</h2> <h3 id="小程序调用-wx-login"><a href="#小程序调用-wx-login" class="header-anchor">#</a> 小程序调用 wx.login()</h3> <p>如要静默登录，在小程序页面 onload 时使用 wx.login()接口获取用户登录凭证，将其发送给服务端</p> <ol><li>检查缓存中是否有 accessToken</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">silentLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>wx<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token string">'accessToken'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      wx<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 将code发送给开发者服务器</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'登录失败'</span><span class="token punctuation">,</span> res<span class="token punctuation">.</span>errMsg<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">onLoad</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">silentLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="2"><li>发送 code</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token string">'http://localhost:3000/api/user/login'</span><span class="token punctuation">,</span>
+  method<span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+  <span class="token comment">// 把临时登录凭证发往开发者服务器</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    code<span class="token operator">:</span> res<span class="token punctuation">.</span>code<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// response中含有accessToken和refreshToken</span>
+    <span class="token comment">// 需要保存到缓存中</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="服务端调用-auth-code2session"><a href="#服务端调用-auth-code2session" class="header-anchor">#</a> 服务端调用 auth.code2Session</h3> <p>这一步是调用微信服务器的 auth.code2Session 接口，用用户的登录凭证换取 openid、unionid、session_key。</p> <ol><li>使用 axios 发送请求</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/login'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>code<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">sendStatus</span><span class="token punctuation">(</span><span class="token number">403</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 调用微信服务器的登陆凭证验证接口</span>
+  axios
+    <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'https://api.weixin.qq.com/sns/jscode2session'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      params<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 参数为AppID(小程序ID)和AppSecret(小程序密钥)</span>
+        <span class="token comment">// 可以在微信公众平台查看</span>
+        appid<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">APPID</span><span class="token punctuation">,</span>
+        secret<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">APPSECRET</span><span class="token punctuation">,</span>
+        js_code<span class="token operator">:</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>code<span class="token punctuation">,</span> <span class="token comment">// 用户登录临时凭证code</span>
+        grant_type<span class="token operator">:</span> <span class="token string">'authorization_code'</span><span class="token punctuation">,</span> <span class="token comment">// 文档固定写法</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 响应中包含openid、session_key</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">next</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="2"><li>将响应中的 openid 与数据库中的对比</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 检查数据库中是否已经存在此用户</span>
+<span class="token keyword">let</span> user <span class="token operator">=</span> users<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">u</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> u<span class="token punctuation">.</span>openid <span class="token operator">===</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>openid<span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 不存在此用户，保存下来</span>
+  user <span class="token operator">=</span> <span class="token punctuation">{</span>
+    session_key<span class="token operator">:</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>session_key<span class="token punctuation">,</span>
+    openid<span class="token operator">:</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>openid<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+  users<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="3"><li>生成 accessToken 和 refreshToken</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> payload <span class="token operator">=</span> <span class="token punctuation">{</span>
+  openid<span class="token operator">:</span> user<span class="token punctuation">.</span>openid<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 生成accessToken和refreshToken</span>
+<span class="token comment">// 自定义登录态与openid,sesson_key关联</span>
+<span class="token keyword">const</span> accessToken <span class="token operator">=</span> <span class="token function">generateAccessToken</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+<span class="token keyword">const</span> refreshToken <span class="token operator">=</span> <span class="token function">generateRefreshToken</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  accessToken<span class="token punctuation">,</span>
+  refreshToken<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="小程序将-token-缓存"><a href="#小程序将-token-缓存" class="header-anchor">#</a> 小程序将 token 缓存</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置本地缓存</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'成功获取token'</span><span class="token punctuation">)</span>
+  <span class="token comment">// 1. 以后请求接口，需要将accessToken放入http请求头authorization字段</span>
+  <span class="token comment">// 2. 若发现accessToken失效了，则要用refreshToken调用/api/user/token重新获取</span>
+  wx<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'accessToken'</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>accessToken<span class="token punctuation">)</span>
+  wx<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token string">'refreshToken'</span><span class="token punctuation">,</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>refreshToken<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="请求头中带上-token"><a href="#请求头中带上-token" class="header-anchor">#</a> 请求头中带上 token</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>wx<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token string">'http://localhost:3000/posts'</span><span class="token punctuation">,</span>
+  header<span class="token operator">:</span> <span class="token punctuation">{</span> Authorization<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Bearer </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>wx<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token string">'accessToken'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="token-续期"><a href="#token-续期" class="header-anchor">#</a> token 续期</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/token'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> refreshToken <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>token
+  <span class="token comment">// refreshTokens存在数据库里，或redis</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>refreshTokens<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>refreshToken<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">sendStatus</span><span class="token punctuation">(</span><span class="token number">403</span><span class="token punctuation">)</span>
+
+  jwt<span class="token punctuation">.</span><span class="token function">verify</span><span class="token punctuation">(</span>refreshToken<span class="token punctuation">,</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">REFRESH_TOKEN_SECRET</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> user</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">sendStatus</span><span class="token punctuation">(</span><span class="token number">403</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> accessToken <span class="token operator">=</span> <span class="token function">generateAccessToken</span><span class="token punctuation">(</span><span class="token punctuation">{</span> openid<span class="token operator">:</span> user<span class="token punctuation">.</span>openid <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> accessToken <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="撤销-token"><a href="#撤销-token" class="header-anchor">#</a> 撤销 token</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>router<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">'/logout'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  refreshTokens <span class="token operator">=</span> refreshTokens<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">token</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> token <span class="token operator">!==</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>token<span class="token punctuation">)</span>
+  res<span class="token punctuation">.</span><span class="token function">sendStatus</span><span class="token punctuation">(</span><span class="token number">204</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.61b409e0.js" defer></script><script src="/assets/js/2.1404a170.js" defer></script><script src="/assets/js/43.bc126466.js" defer></script>
+  </body>
+</html>

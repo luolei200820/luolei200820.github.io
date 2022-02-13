@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MongoDB Crash Course | luolei的笔记本</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/favicon.svg">
+    <meta name="description" content="连luolei都开始记笔记了，求你多学一点">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.61b409e0.js" as="script"><link rel="preload" href="/assets/js/2.1404a170.js" as="script"><link rel="preload" href="/assets/js/21.38028bc7.js" as="script"><link rel="prefetch" href="/assets/js/10.d41bf6dd.js"><link rel="prefetch" href="/assets/js/11.421317f1.js"><link rel="prefetch" href="/assets/js/12.37acd801.js"><link rel="prefetch" href="/assets/js/13.6177ecdd.js"><link rel="prefetch" href="/assets/js/14.e71630b0.js"><link rel="prefetch" href="/assets/js/15.2bb56f36.js"><link rel="prefetch" href="/assets/js/16.94eabcfe.js"><link rel="prefetch" href="/assets/js/17.d6977293.js"><link rel="prefetch" href="/assets/js/18.896c7642.js"><link rel="prefetch" href="/assets/js/19.8f75d976.js"><link rel="prefetch" href="/assets/js/20.28619510.js"><link rel="prefetch" href="/assets/js/22.002f4a53.js"><link rel="prefetch" href="/assets/js/23.a680f932.js"><link rel="prefetch" href="/assets/js/24.e2049574.js"><link rel="prefetch" href="/assets/js/25.12f269b1.js"><link rel="prefetch" href="/assets/js/26.6660f834.js"><link rel="prefetch" href="/assets/js/27.3bae0144.js"><link rel="prefetch" href="/assets/js/28.66df9504.js"><link rel="prefetch" href="/assets/js/29.d39b27f0.js"><link rel="prefetch" href="/assets/js/3.96cbf3a8.js"><link rel="prefetch" href="/assets/js/30.14ee7d88.js"><link rel="prefetch" href="/assets/js/31.e00cb6a2.js"><link rel="prefetch" href="/assets/js/32.2a039cb8.js"><link rel="prefetch" href="/assets/js/33.d5cc48a2.js"><link rel="prefetch" href="/assets/js/34.8ad3ed4c.js"><link rel="prefetch" href="/assets/js/35.81590eda.js"><link rel="prefetch" href="/assets/js/36.787ae90d.js"><link rel="prefetch" href="/assets/js/37.df4382fe.js"><link rel="prefetch" href="/assets/js/38.e0801940.js"><link rel="prefetch" href="/assets/js/39.b0fa8619.js"><link rel="prefetch" href="/assets/js/4.2d7e81a9.js"><link rel="prefetch" href="/assets/js/40.aaae97b2.js"><link rel="prefetch" href="/assets/js/41.2c999770.js"><link rel="prefetch" href="/assets/js/42.8be4f040.js"><link rel="prefetch" href="/assets/js/43.bc126466.js"><link rel="prefetch" href="/assets/js/44.9521f1bb.js"><link rel="prefetch" href="/assets/js/45.59c950c0.js"><link rel="prefetch" href="/assets/js/46.370abb57.js"><link rel="prefetch" href="/assets/js/47.98676814.js"><link rel="prefetch" href="/assets/js/5.faf53b61.js"><link rel="prefetch" href="/assets/js/6.de37927d.js"><link rel="prefetch" href="/assets/js/7.4976c147.js"><link rel="prefetch" href="/assets/js/8.af71189f.js"><link rel="prefetch" href="/assets/js/9.cc298396.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">luolei的笔记本</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/es6/" class="nav-link">
+  ES6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mongodb/crash-course.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mini-program/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/fun/编译LineageOS或者AOSP.html" class="nav-link">
+  东搞西搞
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/luolei200820" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端" class="dropdown-title"><span class="title">Web前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端" class="mobile-dropdown-title"><span class="title">Web前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/js/" class="nav-link">
+  JS
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/es6/" class="nav-link">
+  ES6
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/" class="nav-link">
+  Vue
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mongodb/crash-course.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  MongoDB
+</a></li><li class="dropdown-item"><!----> <a href="/mini-program/" class="nav-link">
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/fun/编译LineageOS或者AOSP.html" class="nav-link">
+  东搞西搞
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/luolei200820" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MongoDB</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/database/mongodb/1.插入文档.html" class="sidebar-link">插入文档</a></li><li><a href="/database/mongodb/2.查询文档.html" class="sidebar-link">查询文档</a></li><li><a href="/database/mongodb/3.查询嵌入或嵌套的文档.html" class="sidebar-link">查询嵌入或嵌套的文档</a></li><li><a href="/database/mongodb/4.查询一个数组.html" class="sidebar-link">查询一个数组</a></li><li><a href="/database/mongodb/5.查询一个嵌入文档的数组.html" class="sidebar-link">查询一个嵌入文档的数组</a></li><li><a href="/database/mongodb/6.对查询结果投影字段.html" class="sidebar-link">对查询结果投影字段</a></li><li><a href="/database/mongodb/7.查询null或者缺失的字段.html" class="sidebar-link">查询 null 或者缺失的字段</a></li><li><a href="/database/mongodb/8.在mongosh中迭代游标.html" class="sidebar-link">在mongosh中迭代游标</a></li><li><a href="/database/mongodb/crash-course.html" aria-current="page" class="active sidebar-link">MongoDB Crash Course</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#basic" class="sidebar-link">basic</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#create-collection" class="sidebar-link">create collection</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#insert" class="sidebar-link">insert</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#insert-many" class="sidebar-link">insert many</a></li></ul></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#query" class="sidebar-link">query</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#equal" class="sidebar-link">equal</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#sort" class="sidebar-link">sort</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#count" class="sidebar-link">count</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#limit" class="sidebar-link">limit</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#sort-and-limit" class="sidebar-link">sort and limit</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#foreach" class="sidebar-link">forEach</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#findone" class="sidebar-link">findOne</a></li></ul></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#update" class="sidebar-link">update</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#upsert" class="sidebar-link">upsert</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#set-operator" class="sidebar-link">$set operator</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#inc-operator" class="sidebar-link">$inc operator</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#rename-operator" class="sidebar-link">$rename operator</a></li></ul></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#remove" class="sidebar-link">remove</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#sub-document" class="sidebar-link">sub document</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#elemmatch" class="sidebar-link">$elemMatch</a></li></ul></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#index" class="sidebar-link">index</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#fuzzy-search" class="sidebar-link">fuzzy search</a></li></ul></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#compare-operator" class="sidebar-link">compare operator</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#greater-than" class="sidebar-link">greater than</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#greater-than-or-equal" class="sidebar-link">greater than or equal</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#smaller-than" class="sidebar-link">smaller than</a></li><li class="sidebar-sub-header"><a href="/database/mongodb/crash-course.html#smaller-than-or-equal" class="sidebar-link">smaller than or equal</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mongodb-crash-course"><a href="#mongodb-crash-course" class="header-anchor">#</a> MongoDB Crash Course</h1> <h2 id="basic"><a href="#basic" class="header-anchor">#</a> basic</h2> <p><strong>show all databases</strong> <code>show dbs</code></p> <p><strong>switch database</strong> <code>use test1</code></p> <p><code>show collections</code></p> <p><strong>delete database</strong> <code>db.dropDatabase()</code></p> <p><strong>check current database</strong> <code>db</code></p> <h2 id="create-collection"><a href="#create-collection" class="header-anchor">#</a> create collection</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span><span class="token function">createCollection</span><span class="token punctuation">(</span><span class="token string">'post'</span><span class="token punctuation">)</span>
+<span class="token comment">// { &quot;ok&quot; : 1 }</span>
+</code></pre></div><h2 id="insert"><a href="#insert" class="header-anchor">#</a> insert</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">'Post One'</span><span class="token punctuation">,</span>
+  body<span class="token operator">:</span> <span class="token string">'Body of post one'</span><span class="token punctuation">,</span>
+  category<span class="token operator">:</span> <span class="token string">'News'</span><span class="token punctuation">,</span>
+  likes<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  tags<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'news'</span><span class="token punctuation">,</span> <span class="token string">'events'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  user<span class="token operator">:</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'John Doe'</span><span class="token punctuation">,</span>
+    status<span class="token operator">:</span> <span class="token string">'author'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// WriteResult({ &quot;nInserted&quot; : 1 })</span>
+</code></pre></div><h3 id="insert-many"><a href="#insert-many" class="header-anchor">#</a> insert many</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">insertMany</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">'Post Two'</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token string">'Body of post two'</span><span class="token punctuation">,</span>
+    category<span class="token operator">:</span> <span class="token string">'Technology'</span><span class="token punctuation">,</span>
+    date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">'Post Three'</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token string">'Body of post two'</span><span class="token punctuation">,</span>
+    category<span class="token operator">:</span> <span class="token string">'News'</span><span class="token punctuation">,</span>
+    date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">'Post Four'</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token string">'Body of post two'</span><span class="token punctuation">,</span>
+    category<span class="token operator">:</span> <span class="token string">'Entertainment'</span><span class="token punctuation">,</span>
+    date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">/*   {
+    acknowledged: true,
+    insertedIds: [
+      ObjectId('61b1ce9e2336951e256b142a'),
+      ObjectId('61b1ce9e2336951e256b142b'),
+      ObjectId('61b1ce9e2336951e256b142c'),
+    ],
+  } */</span>
+</code></pre></div><h2 id="query"><a href="#query" class="header-anchor">#</a> query</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// hard to read</span>
+db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pretty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// easy to read</span>
+</code></pre></div><h3 id="equal"><a href="#equal" class="header-anchor">#</a> equal</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span> category<span class="token operator">:</span> <span class="token string">'News'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="sort"><a href="#sort" class="header-anchor">#</a> sort</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pretty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// 1 for ascending</span>
+<span class="token comment">// -1 for descending</span>
+</code></pre></div><h3 id="count"><a href="#count" class="header-anchor">#</a> count</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span> category<span class="token operator">:</span> <span class="token string">'News'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="limit"><a href="#limit" class="header-anchor">#</a> limit</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="sort-and-limit"><a href="#sort-and-limit" class="header-anchor">#</a> sort and limit</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="foreach"><a href="#foreach" class="header-anchor">#</a> forEach</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">doc</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'Blog Post: '</span> <span class="token operator">+</span> doc<span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="findone"><a href="#findone" class="header-anchor">#</a> findOne</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span> category<span class="token operator">:</span> <span class="token string">'News'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="update"><a href="#update" class="header-anchor">#</a> update</h2> <h3 id="upsert"><a href="#upsert" class="header-anchor">#</a> upsert</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'Post Two'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    title<span class="token operator">:</span> <span class="token string">'Post Two'</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token string">'New post 2 body'</span><span class="token punctuation">,</span>
+    date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// if this isn't found it will create it</span>
+    upsert<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token comment">/* 
+WriteResult({
+        &quot;nMatched&quot; : 0,
+        &quot;nUpserted&quot; : 1,
+        &quot;nModified&quot; : 0,
+        &quot;_id&quot; : ObjectId(&quot;61b1e0aede41e7c20ae6af2a&quot;)
+})
+ */</span>
+</code></pre></div><h3 id="set-operator"><a href="#set-operator" class="header-anchor">#</a> $set operator</h3> <p>you just want replace you know one or two fields</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'Post Two'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    $set<span class="token operator">:</span> <span class="token punctuation">{</span>
+      body<span class="token operator">:</span> <span class="token string">'Body of post 2'</span><span class="token punctuation">,</span>
+      category<span class="token operator">:</span> <span class="token string">'Technology'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token comment">// WriteResult({ &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 })</span>
+</code></pre></div><h3 id="inc-operator"><a href="#inc-operator" class="header-anchor">#</a> $inc operator</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'Post One'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// origin 4, now 6</span>
+    $inc<span class="token operator">:</span> <span class="token punctuation">{</span> likes<span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="rename-operator"><a href="#rename-operator" class="header-anchor">#</a> $rename operator</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'Post One'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token comment">// rename likes field to 'views'</span>
+    $rename<span class="token operator">:</span> <span class="token punctuation">{</span> likes<span class="token operator">:</span> <span class="token string">'views'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h2 id="remove"><a href="#remove" class="header-anchor">#</a> remove</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'Post Four'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// WriteResult({ &quot;nRemoved&quot; : 1 })</span>
+</code></pre></div><h2 id="sub-document"><a href="#sub-document" class="header-anchor">#</a> sub document</h2> <p>In a relational database, if we hava post usually we want some comments.</p> <p>What we do is hava a separate table for comments, we hava to create a foreign key that links to a primay key on the other table.</p> <p>In mongodb, we can simply embed the comments right inside of the post collection.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'Post One'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    $set<span class="token operator">:</span> <span class="token punctuation">{</span>
+      comments<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          user<span class="token operator">:</span> <span class="token string">'Mary Williams'</span><span class="token punctuation">,</span>
+          body<span class="token operator">:</span> <span class="token string">'Comment One'</span><span class="token punctuation">,</span>
+          date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          user<span class="token operator">:</span> <span class="token string">'Harry White'</span><span class="token punctuation">,</span>
+          body<span class="token operator">:</span> <span class="token string">'Comment Two'</span><span class="token punctuation">,</span>
+          date<span class="token operator">:</span> <span class="token function">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token comment">// WriteResult({ &quot;nMatched&quot; : 1, &quot;nUpserted&quot; : 0, &quot;nModified&quot; : 1 })</span>
+</code></pre></div><h3 id="elemmatch"><a href="#elemmatch" class="header-anchor">#</a> $elemMatch</h3> <p>Find all Mary Williams's comments.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  comments<span class="token operator">:</span> <span class="token punctuation">{</span>
+    $elemMatch<span class="token operator">:</span> <span class="token punctuation">{</span> user<span class="token operator">:</span> <span class="token string">'Mary Williams'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="index"><a href="#index" class="header-anchor">#</a> index</h2> <p>Create Index.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">createIndex</span><span class="token punctuation">(</span>
+  <span class="token comment">// add a text index to the title</span>
+  <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">'text'</span> <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token comment">/*
+{
+  &quot;numIndexesBefore&quot; : 1,
+  &quot;numIndexesAfter&quot; : 2,
+  &quot;createdCollectionAutomatically&quot; : false,
+  &quot;ok&quot; : 1
+}
+*/</span>
+</code></pre></div><h3 id="fuzzy-search"><a href="#fuzzy-search" class="header-anchor">#</a> fuzzy search</h3> <p>$text: performs a text search on the content of the fields indexed with a text index</p> <p>$search: A string of terms that MongoDB parses and uses to query the text index.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  $text<span class="token operator">:</span> <span class="token punctuation">{</span>
+    $search<span class="token operator">:</span> <span class="token string">'&quot;Post O&quot;'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="compare-operator"><a href="#compare-operator" class="header-anchor">#</a> compare operator</h2> <h3 id="greater-than"><a href="#greater-than" class="header-anchor">#</a> greater than</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  views<span class="token operator">:</span> <span class="token punctuation">{</span> $gt<span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="greater-than-or-equal"><a href="#greater-than-or-equal" class="header-anchor">#</a> greater than or equal</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  views<span class="token operator">:</span> <span class="token punctuation">{</span> $gte<span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="smaller-than"><a href="#smaller-than" class="header-anchor">#</a> smaller than</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  views<span class="token operator">:</span> <span class="token punctuation">{</span> $lt<span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="smaller-than-or-equal"><a href="#smaller-than-or-equal" class="header-anchor">#</a> smaller than or equal</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>db<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  views<span class="token operator">:</span> <span class="token punctuation">{</span> $lte<span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/database/mongodb/8.在mongosh中迭代游标.html" class="prev">
+        在mongosh中迭代游标
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.61b409e0.js" defer></script><script src="/assets/js/2.1404a170.js" defer></script><script src="/assets/js/21.38028bc7.js" defer></script>
+  </body>
+</html>
