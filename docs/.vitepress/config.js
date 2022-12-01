@@ -13,7 +13,7 @@ export default {
                     { text: '铁路货运员', link: '/notebook/铁路货运员/' }
                 ]
             },
-            { text: '博客', link: '/blog' },
+            // { text: '博客', link: '/blog' },
             { text: 'Github', link: 'https://github.com/luolei200820' }
         ],
         sidebar: {
