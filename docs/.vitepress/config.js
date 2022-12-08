@@ -10,7 +10,8 @@ export default {
                 items: [
                     { text: 'Java', link: '/notebook/java/基础/01-Java概述.md' },
                     // { text: 'JavaScript', link: '/notebook/javascript/' },
-                    { text: '铁路货运员', link: '/notebook/铁路货运员/' }
+                    { text: '铁路货运员', link: '/notebook/铁路货运员/' },
+                    { text: 'WebGL', link: '/notebook/webgl/' }
                 ]
             },
             // { text: '博客', link: '/blog' },

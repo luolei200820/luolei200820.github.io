@@ -1,19 +1,19 @@
 {
-  "name": "vitepress-notebook",
+  "name": "luolei200820.github.io",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "repository": "git@github.com:luolei200820/luolei200820.github.io.git",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.30",
+    "vue": "^3.2.45"
+  },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:preview": "vitepress preview docs"
   },
-  "keywords": [],
-  "author": "luolei200820 <1074366993@qq.com>",
-  "license": "ISC",
-  "devDependencies": {
-    "vitepress": "^1.0.0-alpha.20",
-    "vue": "^3.2.40"
-  },
-  "repository": "git@github.com:luolei200820/luolei200820.github.io.git"
+  "dependencies": {
+    "three": "^0.147.0"
+  }
 }

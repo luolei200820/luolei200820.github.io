@@ -1,7 +1,5 @@
 # CHINA RAIL WAY FREIGT
 
-![集装箱](./img/%E5%B0%81%E9%9D%A2.jpeg)
+<!-- ![集装箱](./img/%E5%B0%81%E9%9D%A2.jpeg) -->
 
 1. [货物运到期限的计算](./%E8%B4%A7%E7%89%A9%E8%BF%90%E5%88%B0%E6%9C%9F%E9%99%90%E7%9A%84%E8%AE%A1%E7%AE%97.md)
-
-456
