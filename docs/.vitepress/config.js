@@ -40,6 +40,15 @@ export default {
                         { text: '货物运到期限的计算', link: '/notebook/铁路货运员/货物运到期限的计算.md' },
                     ]
                 }
+            ],
+            '/notebook/webgl': [
+                {
+                    text: 'WebGL',
+                    items: [
+                        { text: '欢迎来到WebGL的世界', link: '/notebook/webgl/index.md' },
+                        { text: '初探three.js', link: '/notebook/webgl/初探three.js.md' }
+                    ]
+                }
             ]
         },
         outlineTitle: '导航',
