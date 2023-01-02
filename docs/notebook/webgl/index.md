@@ -1,9 +1,9 @@
-<script setup>
+<!-- <script setup>
     import Nerv3D from '../../../components/Nerv3D.vue'
-</script>
+</script> -->
 # 欢迎来到WebGL的世界
 
-<Nerv3D></Nerv3D>
+<!-- <Nerv3D></Nerv3D> -->
 
 **WebGL**是一种JavaScript API，用于在不使用插件的情况下在任何兼容的网页浏览器中呈现交互式2D和3D图形。WebGL完全集成到浏览器的所有网页标准中，可将影像处理和效果的GPU加速使用方式当做网页Canvas的一部分。WebGL元素可以加入其他HTML元素之中并与网页或网页背景的其他部分混合。WebGL程序由JavaScript编写的句柄和OpenGL Shading Language（GLSL）编写的着色器代码组成，该语言类似于C或C++，并在电脑的图形处理器（GPU）上执行。WebGL由非营利Khronos Group设计和维护。
 

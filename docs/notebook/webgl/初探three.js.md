@@ -1,6 +1,6 @@
-<script setup>
+<!-- <script setup>
     import Nerv3D from '../../../components/Nerv3D.vue'
-</script>
+</script> -->
 
 # 初探three.js
 
