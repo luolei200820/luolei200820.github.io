@@ -18,8 +18,8 @@ jobs:
       with:
         node-version: 18
 
-    - run: yarn install --frozen-lockfile
-    - run: yarn run docs:build
+    - run: npm i
+    - run: npm run docs:build
 
     # please check out the docs of the workflow for more details
     # @see https://github.com/crazy-max/ghaction-github-pages
