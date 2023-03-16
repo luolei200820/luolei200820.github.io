@@ -1,10 +1,10 @@
-# 3. 运算符
+# 第3章 运算符
 
 ## 3.1 算数运算符
 
 **算术运算符一览**
 
-![算术运算符一览](./image/3.1-算术运算符一览.jpg)
+![算术运算符一览](./image/charpter3/arithmetic-operator.jpg)
 
 ### 3.1.1 案例演示
 
@@ -148,7 +148,7 @@ System.out.println("i2="+i2);
 
 **关系运算符一览**
 
-![关系运算符一览](./image/3.1-关系运算符一览.jpg)
+![关系运算符一览](./image/charpter3/relational-operators.jpg)
 
 **细节说明**
 
@@ -222,7 +222,7 @@ b++; // b = (byte)b+1;
 
 ## 3.6 运算符优先级
 
-![运算符优先级](./image/3.6-运算符优先级.jpg)
+![运算符优先级](./image/charpter3/operator-priority.jpg)
 
 ## 3.7 标识符的命名规则和规范
 

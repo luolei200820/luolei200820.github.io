@@ -14,11 +14,7 @@ export default defineUserConfig({
                 children: [
                     {
                         text: 'Java',
-                        link: '/notebook/java/基础/01-Java概述.md'
-                    },
-                    {
-                        text: '铁路货运员',
-                        link: '/notebook/railway/技能鉴定/中级货运员.md'
+                        link: '/notebook/java/basic/introduction.md'
                     }
                 ]
             },
@@ -33,26 +29,11 @@ export default defineUserConfig({
                     text: '基础',
                     collapsible: false,
                     children: [
-                        '/notebook/java/基础/01-Java概述.md',
-                        '/notebook/java/基础/02-变量.md',
-                        '/notebook/java/基础/03-运算符.md'
-                    ]
-                }
-            ],
-            '/notebook/railway/': [
-                {
-                    text: '技能鉴定',
-                    collapsible: false,
-                    children: [
-                        '/notebook/railway/技能鉴定/中级货运员.md',
-                        '/notebook/railway/技能鉴定/定职考试.md'
-                    ]
-                },
-                {
-                    text: '规章标准',
-                    collapsible: false,
-                    children: [
-                        '/notebook/railway/规章标准/货车篷布管理规则.md'
+                        '/notebook/java/basic/introduction.md',
+                        '/notebook/java/basic/variable.md',
+                        '/notebook/java/basic/operator.md',
+                        '/notebook/java/basic/object-oriented.md',
+                        '/notebook/java/basic/inherit.md'
                     ]
                 }
             ]

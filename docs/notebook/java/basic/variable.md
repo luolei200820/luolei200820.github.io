@@ -1,4 +1,4 @@
-# 2. 变量
+# 第2章 变量
 
 ## 2.1 变量简介
 
@@ -110,7 +110,7 @@ class Test {
 2. Java提供了大量的基础类，因此Oracle公司也为这些类提供了相应的API文档
 3. Java类的组织形式【见示意图】：
    
-   ![Java类的组织形式](./image/2.5-Java类的组织形式.jpg)
+   ![Java类的组织形式](./image/charpter2/classes-orgnization.jpg)
 
 4. 通过包名查找类，或者直接检索
 
