@@ -1,4 +1,4 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
 
 export default defineUserConfig({
     lang: 'zh-CN',
@@ -14,7 +14,11 @@ export default defineUserConfig({
                 children: [
                     {
                         text: 'Java',
-                        link: '/notebook/java/basic/introduction.md'
+                        link: '/notebook/java/basic/第1章-Java概述.md'
+                    },
+                    {
+                        text: 'CTF',
+                        link: '/notebook/CTF/1-Web.md'
                     }
                 ]
             },
@@ -29,14 +33,22 @@ export default defineUserConfig({
                     text: '基础',
                     collapsible: false,
                     children: [
-                        '/notebook/java/basic/introduction.md',
-                        '/notebook/java/basic/variable.md',
-                        '/notebook/java/basic/operator.md',
-                        '/notebook/java/basic/object-oriented.md',
-                        '/notebook/java/basic/inherit.md'
+                        '/notebook/java/basic/第1章-Java概述.md',
+                        '/notebook/java/basic/第2章-变量.md',
+                        '/notebook/java/basic/第3章-运算符.md',
+                        '/notebook/java/basic/第4章-面向对象.md',
+                        '/notebook/java/basic/第5章-继承.md',
+                        '/notebook/java/basic/第6章-接口、lambda表达式与内部类.md'
                     ]
                 }
             ]
         }
+    }),
+    bundler: viteBundler({
+        viteOptions: {
+            server: {
+                host: 'localhost'
+            }
+        },
     })
 })
